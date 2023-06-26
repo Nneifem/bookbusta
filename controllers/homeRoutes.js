@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const { Project, User } = require('../models');
 const withAuth = require('../utils/auth');
+const { getQuote } = require('../utils/quote-api');
 
 router.get('/', async (req, res) => {
   try {
@@ -78,5 +79,22 @@ router.get('/login', (req, res) => {
 
   res.render('login');
 });
+
+router.get('/get-quote', async (req, res) => {
+  try {
+  // console.log(process.env.API_QUOTE_URL);
+  let quoteData = await getQuote();
+    quoteData = quoteData.data.quote;
+    console.log(quoteData);
+    res.render('get-quote', {
+      quoteData
+    });
+  } catch (err) {
+    console.log(err);
+    res.json({
+      message: "you know there's an error right?"
+    });
+  }
+})
 
 module.exports = router;
