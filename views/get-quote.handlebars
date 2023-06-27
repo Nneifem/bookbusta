@@ -1,1 +1,9 @@
 <h1>{{quoteData.volumeInfo.title}}</h1>
+<p>Author: {{quoteData.volumeInfo.authors}}</p>
+<div class="image">
+    <img src="{{quoteData.volumeInfo.imageLinks.smallThumbnail}}">
+</div>
+<p>Summary: {{quoteData.volumeInfo.description}}</p>
+<p>Page Count: {{quoteData.volumeInfo.pageCount}}</p>
+<p>Rating: {{quoteData.volumeInfo.averageRating}}/5</p>
+<a href="{{quoteData.volumeInfo.previewLink}}">Preview the book!</a>
