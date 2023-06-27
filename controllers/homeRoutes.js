@@ -80,14 +80,16 @@ router.get('/login', (req, res) => {
   res.render('login');
 });
 
-router.get('/get-quote', async (req, res) => {
+router.get('/get-quote/:book', async (req, res) => {
   try {
   // console.log(process.env.API_QUOTE_URL);
-  let quoteData = await getQuote();
-    quoteData = quoteData.data.quote;
-    console.log(quoteData);
+  var bookToSearch = req.params.book;
+  console.log(bookToSearch);
+  let quoteData = await getQuote(bookToSearch);
+    // quoteData = ;
+    console.log(quoteData.data.items[0]);
     res.render('get-quote', {
-      quoteData
+    quoteData: quoteData.data.items[0]
     });
   } catch (err) {
     console.log(err);
