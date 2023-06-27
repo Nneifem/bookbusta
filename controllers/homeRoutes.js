@@ -5,8 +5,8 @@ const { getQuote } = require('../utils/quote-api');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
-    const projectData = await Book.findAll({
+    // Get all books and JOIN with user data
+    const bookData = await Book.findAll({
       include: [
         {
           model: User,
@@ -16,11 +16,11 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const projects = projectData.map((Book) => Book.get({ plain: true }));
+    const books = bookData.map((Book) => Book.get({ plain: true }));
 
     // Pass serialized data and session flag into template
     res.render('homepage', { 
-      projects, 
+      books, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
@@ -28,9 +28,9 @@ router.get('/', async (req, res) => {
   }
 });
 
-router.get('/project/:id', async (req, res) => {
+router.get('/book/:id', async (req, res) => {
   try {
-    const projectData = await Book.findByPk(req.params.id, {
+    const bookData = await Book.findByPk(req.params.id, {
       include: [
         {
           model: User,
@@ -39,10 +39,10 @@ router.get('/project/:id', async (req, res) => {
       ],
     });
 
-    const project = projectData.get({ plain: true });
+    const book = bookData.get({ plain: true });
 
-    res.render('project', {
-      ...project,
+    res.render('book', {
+      ...book,
       logged_in: req.session.logged_in
     });
   } catch (err) {
