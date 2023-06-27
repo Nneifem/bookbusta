@@ -1,7 +1,11 @@
 <h1>{{quoteData.volumeInfo.title}}</h1>
 
-<div class="col-md-4">
-      <div class="text-success" style="font-size: large;
-            font-weight: 700;">{{this.name}}</div>
-         <img src="{{quoteData.imageLinks.small.Tumbnails}}">
-      </div>
+<p>Author: {{quoteData.volumeInfo.authors}}</p>
+<div class="image">
+    <img src="{{quoteData.volumeInfo.imageLinks.smallThumbnail}}">
+</div>
+<p>Summary: {{quoteData.volumeInfo.description}}</p>
+<p>Page Count: {{quoteData.volumeInfo.pageCount}}</p>
+<p>Rating: {{quoteData.volumeInfo.averageRating}}/5</p>
+<a href="{{quoteData.volumeInfo.previewLink}}">Preview the book!</a>
+
