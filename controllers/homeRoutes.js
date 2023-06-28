@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Book, User } = require('../models');
+const { Book, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const { getQuote } = require('../utils/quote-api');
 
@@ -11,6 +11,10 @@ router.get('/', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
+        },
+        {
+          model: Comment,
+          attributes: ["comment_body"],
         },
       ],
     });
@@ -35,6 +39,10 @@ router.get('/book/:id', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
+        },
+        {
+          model: Comment,
+          include: [User],
         },
       ],
     });
