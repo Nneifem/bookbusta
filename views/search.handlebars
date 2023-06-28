@@ -1,0 +1,22 @@
+<form id ="search-form">
+    <div class="input-group">
+        <div class="form-outline">
+             <input type="text" id="search" class="form-control" />
+      <label class="form-label" for="search">Search</label>
+    </div>
+    <button type="submit" class="btn btn-primary"> 
+      <i class="fas fa-search"></i>
+    </button>
+  </div>
+</form>
+<ul>
+  {{#each giphyData}}
+  <li><img src="{{url}}" alt="{{alt}}" /></li>
+  {{/each}}
+</ul>
+
+<script src="/js/search-giphy.js"></script>
+
+        </div>
+    </div>
+</form>
