@@ -82,11 +82,9 @@ router.get('/login', (req, res) => {
 
 router.get('/get-quote/:book', async (req, res) => {
   try {
-  // console.log(process.env.API_QUOTE_URL);
   var bookToSearch = req.params.book;
   console.log(bookToSearch);
   let quoteData = await getQuote(bookToSearch);
-    // quoteData = ;
     console.log(quoteData.data.items[0]);
     res.render('get-quote', {
     quoteData: quoteData.data.items[0]
