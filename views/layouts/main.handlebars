@@ -17,12 +17,18 @@
 
 <body>
   <div class="flex-column justify-space-around">
-    <header class="display-flex justify-space-between align-center p-2">
-      <h1>
-        <a href="/">Bookbusta</a>
-        <span role="img" aria-label="book">📖</span>
-      </h1>
-      <nav>
+    <header class="navBar display-flex text-center justify-space-between align-center p-2">
+    {{!-- <header class="display-flex justify-space-between align-center p-2"> --}}
+      
+    <h1>
+      <span role="img" aria-label="book">📖</span>
+      <a class="text-dark" href="/">Bookbusta</a>
+      <span role="img" aria-label="book">📖</span>
+    </h1>
+        {{!-- <a href="/">Bookbusta</a>
+        <span role="img" aria-label="book">📖</span> --}}
+      {{!-- </h1> --}}
+      {{!-- <nav>
         <a href="/searchbooks">Search Books</a> |
         <!-- Conditionally render login or logout links -->
         {{#if logged_in}}
@@ -31,7 +37,36 @@
         {{else}}
         <a href="/login">login</a>
         {{/if}}
-      </nav>
+        </nav> --}}
+
+        <nav class="nav nav-tabs justify-content-center">
+      <!-- Conditionally render login or logout links -->
+      {{#if logged_in}}
+      <li class="nav-item">
+        <a class="nav-link active" href="/searchbooks"><i class="fa fa-fw fa-home"></i>Search Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/profile"><i class="fa fa-fw fa-laptop"></i>Profile</a>
+      </li>
+      <li class="nav-item">
+        <button class="no-button nav-link active" id="logout"><i class="fa fa-fw fa-user"></i>Logout</button>
+      </li>
+      {{else}}
+      <li class="nav-item">
+        <a class="nav-link active" href="/searchbooks"><i class="fa fa-fw fa-home"></i> Search Books</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/profile"><i class="fa fa-fw fa-laptop"></i>Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="/login"><i class="fa fa-fw fa-user"></i>Login</a>
+      </li>
+      {{/if}}
+    </nav>
+
+
+
+     
     </header>
     <main class="container container-fluid mt-5">
       <!-- Render the sub layout -->
