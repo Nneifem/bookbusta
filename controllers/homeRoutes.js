@@ -2,6 +2,7 @@ const router = require('express').Router();
 const { Book, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const { getQuote } = require('../utils/quote-api');
+const { getGenre } = require('../utils/genre-api');
 
 router.get('/', async (req, res) => {
   try {
@@ -103,6 +104,32 @@ router.get('/get-quote/:book', async (req, res) => {
       message: "you know there's an error right?"
     });
   }
-})
+});
+
+router.get('/questionare', async (req, res) => {
+  try {
+    console.log('questionare');
+    res.render('questionare');
+  } catch (err) {
+    console.log(err);
+    res.json({
+      message: "you know there's an error right?"
+    });
+  }
+});
+
+router.get('/questionare/:searchTerm', async (req, res) => {
+  try {
+    const response = await getGenre(req.params.searchTerm);
+    console.log(JSON.stringify(response.data, null, 2));
+
+    res.render('questionare');
+  } catch (err) {
+    console.log(err);
+    res.json({
+      message: "you know there's an error right?"
+    });
+  }
+});
 
 module.exports = router;
