@@ -1,3 +1,6 @@
+console.log("==============");
+console.log("here");
+console.log("==============");
 const questionareForm = async (event) => {
     event.preventDefault();
 
@@ -7,7 +10,6 @@ const questionareForm = async (event) => {
         const response = await fetch('')
     }
 };
-
 document
     .querySelector('.submit-form')
     .addEventListener('submit', questionareForm)
