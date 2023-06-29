@@ -1,7 +1,8 @@
 const router = require('express').Router();
-const { Book, User } = require('../models');
+const { Book, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const { getQuote } = require('../utils/quote-api');
+const { getGenre } = require('../utils/genre-api');
 
 router.get('/', async (req, res) => {
   try {
@@ -11,6 +12,10 @@ router.get('/', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
+        },
+        {
+          model: Comment,
+          attributes: ["comment_body"],
         },
       ],
     });
@@ -35,6 +40,10 @@ router.get('/book/:id', async (req, res) => {
         {
           model: User,
           attributes: ['name'],
+        },
+        {
+          model: Comment,
+          include: [User],
         },
       ],
     });
@@ -82,11 +91,9 @@ router.get('/login', (req, res) => {
 
 router.get('/get-quote/:book', async (req, res) => {
   try {
-  // console.log(process.env.API_QUOTE_URL);
   var bookToSearch = req.params.book;
   console.log(bookToSearch);
   let quoteData = await getQuote(bookToSearch);
-    // quoteData = ;
     console.log(quoteData.data.items[0]);
     res.render('get-quote', {
     quoteData: quoteData.data.items[0]
@@ -97,7 +104,33 @@ router.get('/get-quote/:book', async (req, res) => {
       message: "you know there's an error right?"
     });
   }
-})
+});
+
+router.get('/questionare', async (req, res) => {
+  try {
+    console.log('questionare');
+    res.render('questionare');
+  } catch (err) {
+    console.log(err);
+    res.json({
+      message: "you know there's an error right?"
+    });
+  }
+});
+
+router.get('/questionare/:searchTerm', async (req, res) => {
+  try {
+    const response = await getGenre(req.params.searchTerm);
+    console.log(JSON.stringify(response.data, null, 2));
+
+    res.render('questionare');
+  } catch (err) {
+    console.log(err);
+    res.json({
+      message: "you know there's an error right?"
+    });
+  }
+});
 
 // route to book search page
 router.get("/searchbooks", async (req, res)=> {
