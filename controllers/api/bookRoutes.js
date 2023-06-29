@@ -35,4 +35,8 @@ router.delete('/:id', withAuth, async (req, res) => {
   }
 });
 
+router.get('/book', (req, res) => {
+  return res.render('book');
+});
+
 module.exports = router;

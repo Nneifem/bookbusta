@@ -1,17 +1,57 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "title": "distance",
+    "author": "Ricardo Lowe",
+    "categories": "",
+    "thumbnail": "",
+    "description": "...area gather below women church him store also open send school hay stopped cloth single love friendly managed shake stiff realize surprise jet he",
+    "published_year":"9/26/2045",
+    "average_rating": 5,
+    "page_count": 40,
+    "user_id": 1
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "title": "",
+    "author": "John Sanders",
+    "categories": "",
+    "thumbnail": "",
+    "description": "...change brush spoken become noun stick average government receive danger search trace lower certainly allow finger may inch naturally question nice property darkness perfectly",
+    "published_year":"10/24/2116",
+    "average_rating": 5,
+    "page_count": 1,
+    "user_id": 1
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
-  }
+    "title": "",
+    "author": "Mayme Butler",
+    "categories": "",
+    "thumbnail": "",
+    "description": "...work jack sides bring pocket add available it personal without tape fog even held wind solid hunter team shinning yes her pilot sure label",
+    "published_year":"5/23/2049",
+    "average_rating": 5,
+    "page_count": 123,
+    "user_id": 1
+  },
+  {
+    "title": "",
+    "author": "Joseph Lynch",
+    "categories": "",
+    "thumbnail": "",
+    "description": "...station pupil wooden row familiar thread build written part worried enter broad solar dress thought cause upper goose either return bell became strange few",
+    "published_year":"8/23/2105",
+    "average_rating": 5,
+    "page_count": 123,
+    "user_id": 1
+  },
+  {
+    "title": "",
+    "author": "Bessie Thompson",
+    "categories": "",
+    "thumbnail": "",
+    "description": "...straw glad date automobile particular frog bet principal sharp piano mouse foreign great typical alike depth mood throat sister wore eager various world own",
+    "published_year":"9/18/2053",
+    "average_rating": 5,
+    "page_count": 123,
+    "user_id": 1
+  },23
 ]

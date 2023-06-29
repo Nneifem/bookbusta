@@ -1,6 +1,6 @@
 // Imports
 const router = require("express").Router();
-const { BlogPost, Comment, User } = require("../../models");
+const { Book, Comment, User } = require("../../models");
 
 // Create Comment
 router.post("/", async (req, res) => {
@@ -28,7 +28,7 @@ router.get("/", async (req, res) => {
           attributes: ["username"],
         },
         {
-          model: BlogPost,
+          model: Book,
           attributes: ["id"],
         },
       ],
