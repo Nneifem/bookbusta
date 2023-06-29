@@ -132,4 +132,13 @@ router.get('/questionare/:searchTerm', async (req, res) => {
   }
 });
 
+// route to book search page
+router.get("/searchbooks", async (req, res)=> {
+  try { 
+    res.render("search")
+  } catch (error) {
+    res.status(500).json(error)
+    
+  }
+})
 module.exports = router;
