@@ -36,14 +36,14 @@ const saveBookHandler = async (event) => {
     event.preventDefault();
 
     const card = event.target.closest('.card');
-    const bookName = card.querySelector('.card-title').textContent.trim();
-    const bookDesc = card.querySelector('.card-text').textContent.trim();
-    const bookLink = card.querySelector('#card-link').getAttribute('href').trim();  
+    const title = card.querySelector('.card-title').textContent.trim();
+    const description = card.querySelector('.card-text').textContent.trim();
+    const thumbnail = card.querySelector('#card-link').getAttribute('href').trim();  
 
-    if (bookName && bookDesc && bookLink) {
+    if (title && description && thumbnail) {
         const response = await fetch(`/api/book`, {
             method: 'POST',
-            body: JSON.stringify({ bookName, bookDesc, bookLink }),
+            body: JSON.stringify({ title, description, thumbnail }),
             headers: {
                 'Content-Type': 'application/json',
             },
