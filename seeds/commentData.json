@@ -1,3 +1,44 @@
 [
-  
+  {
+    "comment_body": "My FAVORITE book of all time!!!",
+    "date_created": "June 15, 2022",
+    "user_id": 2,
+    "book_id": 1
+  },
+  {
+    "comment_body": "Never believe people when they recommended this.",
+    "date_created": "June 23, 2023",
+    "user_id": 4,
+    "book_id": 1
+  },
+  {
+    "comment_body": "I can SEE where this is going...",
+    "date_created": "June 26, 2022",
+    "user_id": 4,
+    "book_id": 2
+  },
+  {
+    "comment_body": "OMG!!!",
+    "date_created": "May 28, 2023",
+    "user_id": 3,
+    "book_id": 2
+  },
+  {
+    "comment_body": "every nor hole stay aid gasoline mathematics success area would major rubbed pet adult wear accurate between research too season magic century build compoundPeace and love mannnnn, even for robots!",
+    "date_created": "June 18, 2022",
+    "user_id": 2,
+    "book_id": 3
+  },
+  {
+    "comment_body": "This book sinks! What is your opinion?",
+    "date_created": "June 26, 2022",
+    "user_id": 1,
+    "book_id": 3
+  },
+  {
+    "comment_body": "DM me for free money!!!",
+    "date_created": "June 26, 2022",
+    "user_id": 1,
+    "book_id": 3
+  }
 ]

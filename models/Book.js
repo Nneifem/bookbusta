@@ -17,31 +17,31 @@ Book.init(
     },
     author: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     categories: { //genre
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     thumbnail: { //image
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: { //summary
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
     },
     published_year: {
       type: DataTypes.DATE,
-      allowNull: false,
+      // allowNull: false,
       defaultValue: DataTypes.NOW,
     },
     average_rating: { 
       type: DataTypes.DECIMAL,
-      allowNull: false,
+      // allowNull: false,
     },
     page_count: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      // allowNull: false,
     },
     user_id: {
       type: DataTypes.INTEGER,
