@@ -121,6 +121,10 @@ router.get('/questionare', async (req, res) => {
 router.get('/questionare/:searchTerm', async (req, res) => {
   try {
     const response = await getGenre(req.params.searchTerm);
+    let genreData = response.data.items;
+    genreData = genreData.map(genreInfo => ({
+      title: genreInfo.volumeInfo.title
+    }));
     console.log(JSON.stringify(response.data, null, 2));
 
     res.render('questionare');
