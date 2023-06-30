@@ -123,6 +123,8 @@ router.get('/questionare/:searchTerm', async (req, res) => {
     const response = await getGenre(req.params.searchTerm);
     let genreData = response.data.items;
     genreData = genreData.map(genreInfo => ({
+      bookImage: genreInfo.volumeInfo.imageLinks.smallThumbnail,
+      bookLink: genreInfo.volumeInfo.previewLink,
       bookTitle: genreInfo.volumeInfo.title
     }));
 
