@@ -123,11 +123,12 @@ router.get('/questionare/:searchTerm', async (req, res) => {
     const response = await getGenre(req.params.searchTerm);
     let genreData = response.data.items;
     genreData = genreData.map(genreInfo => ({
-      title: genreInfo.volumeInfo.title
+      bookTitle: genreInfo.volumeInfo.title
     }));
-    console.log(JSON.stringify(response.data, null, 2));
 
-    res.render('questionare');
+    res.render('questionare', {
+      genreData
+    });
   } catch (err) {
     console.log(err);
     res.json({
