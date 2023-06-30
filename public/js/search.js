@@ -23,13 +23,45 @@ function googleapi(event) {
                         <div class="card-body">
                             <h5 class="card-title">${data.items[index].volumeInfo.title}</h5>
                             <p class="card-text">${data.items[index].volumeInfo.description}</p>
-                            <a href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">Go somewhere</a>
+                            <a id="card-link" href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">Go somewhere</a>
+                            <a class="btn btn-primary save" type="submit">Add to Favorites</a> 
                         </div>
                 </div>`
             }
-            console.log(data)
+            console.log(data);
         })
-}
+};
+
+const saveBookHandler = async (event) => {
+    event.preventDefault();
+
+    const card = event.target.closest('.card');
+    const bookName = card.querySelector('.card-title').textContent.trim();
+    const bookDesc = card.querySelector('.card-text').textContent.trim();
+    const bookLink = card.querySelector('#card-link').getAttribute('href').trim();  
+
+    if (bookName && bookDesc && bookLink) {
+        const response = await fetch(`/api/book`, {
+            method: 'POST',
+            body: JSON.stringify({ bookName, bookDesc, bookLink }),
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.ok) {
+            document.location.replace('/profile');
+            console.log('Added to favorites');
+        } else {
+            alert('Failed to add to favorites');
+        }
+    }
+};
 
 
-document.querySelector("#search-form").addEventListener("submit", googleapi)
+document.querySelector("#search-form").addEventListener("submit", googleapi);
+document.addEventListener('click', function (event) {
+    if (event.target.matches('.save')) {
+        saveBookHandler(event);
+    }
+});

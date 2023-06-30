@@ -22,14 +22,20 @@
         </div>
       </form>
       <ul>
-        {{!-- Placeholder for search res --}}
+        {{!-- Placeholder for search results --}}
       </ul>
     </div>
 
+    {{#if books.length}}
     <div class="book-list">
       {{!-- Placeholder for listed booktitles and images --}}
-      <h3>{{ quoteData.volumeInfo.title }}</h3>
+      {{#each books as |book|}}
+      <div class="row mb-2">
+        <h4><a href="book/{{book.bookLink}}">{{book.bookName}}</a></h4>
+      </div>
+      {{/each}}
     </div>
+    {{/if}}
   </div>
 </div>
 
