@@ -106,10 +106,10 @@ router.get('/get-quote/:book', async (req, res) => {
   }
 });
 
-router.get('/questionare', async (req, res) => {
+router.get('/questionaire', async (req, res) => {
   try {
-    console.log('questionare');
-    res.render('questionare');
+    console.log('questionaire');
+    res.render('questionaire');
   } catch (err) {
     console.log(err);
     res.json({
@@ -118,7 +118,7 @@ router.get('/questionare', async (req, res) => {
   }
 });
 
-router.get('/questionare/:searchTerm', async (req, res) => {
+router.get('/questionaire/:searchTerm', async (req, res) => {
   try {
     const response = await getGenre(req.params.searchTerm);
     let genreData = response.data.items;
@@ -128,7 +128,7 @@ router.get('/questionare/:searchTerm', async (req, res) => {
       bookTitle: genreInfo.volumeInfo.title
     }));
 
-    res.render('questionare', {
+    res.render('questionaire', {
       genreData
     });
   } catch (err) {
