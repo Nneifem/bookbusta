@@ -3,9 +3,11 @@
     <h1>
       Welcome to Bookbusta!
     </h1>
-      <p>
-        The ultimate book review catalog for book enthusiast! With Bookbusta you are able to dive into a world of books and discover new books as you explore. Bookbusta is your go to whether you are looking for new recommendations or looking for in-depth reivews. Join Bookbusta today to enjoy this experience. 
-      </p>
+    <p>
+      The ultimate book review catalog for book enthusiast! With Bookbusta you are able to dive into a world of books
+      and discover new books as you explore. Bookbusta is your go to whether you are looking for new recommendations or
+      looking for in-depth reivews. Join Bookbusta today to enjoy this experience.
+    </p>
   </header>
 </div>
 
@@ -16,7 +18,7 @@
 
 
 <!-- Loop over each object in the books array -->
-{{#each books as |book| }}
+{{!-- {{#each books as |book| }}
 <div class="row mb-4 book">
   <div class="col-md-5">
     <h2>
@@ -38,4 +40,27 @@
     </p>
   </div>
 </div>
-{{/each}}
+{{/each}} --}}
+
+<div class="container">
+  <div class="row homepage-main text-center">
+    {{#each books as |book| }}
+    <div class="row mb-4 project card text-dark shadow col-md-10 mx-auto text-left mt-5">
+      <div class="">
+        <h3>
+          <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+          {{{get_emoji}}}
+          <a href="/book/{{book.id}}">{{book.name}}</a>
+        </h3>
+        <p>Created by
+          {{book.user.name}}
+          on
+          {{format_date book.date_created}}</p>
+      </div>
+      <div class="col-md-7">
+        <p>{{book.description}}</p>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
