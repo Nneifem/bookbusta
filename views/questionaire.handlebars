@@ -1,16 +1,16 @@
 <div class="question-section">
-      <h1>What kind of genre do you like to read?</h1>
-
-    <!-- where user will type their response-->
+  
+  <!-- where user will type their response-->
       <form id="genre-form">
         <div class="question-form">
-          <label for="genre-questionaire">Genre: </label>
+          <label for="genre-questionaire">Search Genre</label>
           <input class="genre-input" type="text" id="genre-questionaire">
         </div>
 
     <!-- submit button -->
         <div class="submit-form">
-          <button class="btn genre-submit" type="submit">Submit!</button>
+          <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
         </div>
       </form>
     </div>
@@ -22,10 +22,6 @@
         {{/each}}
     </div>
 
-    <form id="home-button">
-      <div class="home">
-          <button class="btn home-submit" type="submit">Go to Homepage</button>
-        </div>
-    </form>
+
     
 <script src="/js/questionaire.js"></script>
