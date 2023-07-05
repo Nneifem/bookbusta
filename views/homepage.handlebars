@@ -45,7 +45,7 @@
 <div class="container">
   <div class="row homepage-main text-center">
     {{#each books as |book| }}
-    <div class="row mb-4 project card text-dark shadow col-md-10 mx-auto text-left mt-5">
+    <div class="row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5">
       <div class="">
         <h3>
           <!-- Call helper function with triple brackets to render the emoji span as HTML -->
@@ -57,7 +57,7 @@
           on
           {{format_date book.date_created}}</p>
       </div>
-      <div class="col-md-7">
+      <div class="text-center">
         <p>{{book.description}}</p>
       </div>
     </div>
