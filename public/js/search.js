@@ -32,18 +32,20 @@ function googleapi(event) {
         })
 };
 
+// ****** Function to save books to profile ****** //
 const saveBookHandler = async (event) => {
     event.preventDefault();
 
     const card = event.target.closest('.card');
     const title = card.querySelector('.card-title').textContent.trim();
     const description = card.querySelector('.card-text').textContent.trim();
-    const thumbnail = card.querySelector('#card-link').getAttribute('href').trim();  
+    const buyLink = card.querySelector('#card-link').getAttribute('href').trim();
+    const thumbnail = card.querySelector('.card-img-top').getAttribute('src').trim();
 
-    if (title && description && thumbnail) {
+    if (title && description && buyLink && thumbnail) {
         const response = await fetch(`/api/book`, {
             method: 'POST',
-            body: JSON.stringify({ title, description, thumbnail }),
+            body: JSON.stringify({ title, description, buyLink, thumbnail }),
             headers: {
                 'Content-Type': 'application/json',
             },

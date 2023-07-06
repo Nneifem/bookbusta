@@ -13,7 +13,7 @@
       <form id="pf-search-form">
         <div class="input-group">
           <div class="form-outline">
-            <input type="text" id="pf-search" class="form-control"/>
+            <input type="text" id="pf-search" class="form-control" />
             <label class="form-label" for="search">Search...</label>
           </div>
           <button type="button" class="btn btn-primary">
@@ -26,17 +26,53 @@
       </ul>
     </div>
 
-    {{#if books.length}}
-    <div class="book-list">
-      {{!-- Placeholder for listed booktitles and images --}}
-      {{#each books as |book|}}
-      <div class="row mb-2">
-        <h4><a href="book/{{book.bookLink}}">{{book.bookName}}</a></h4>
+    {{!-- Saved to Favorites Books --}}
+    <div class='container'>
+      <div class='row homepage-main text-center'>
+        {{#each books as |book|}}
+        <div class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'>
+          <div class=''>
+            <h3>
+              {{{book.title}}}
+              <div class='image'>
+                <img src='{{book.thumbnail}}' />
+              </div>
+              <a href='/book/{{book.id}}'>{{book.name}}</a>
+            </h3>
+            <p>{{book.description}}</p>
+            <div class='bg-dark text-light'>
+              {{#each book.comments as |comment|}}
+              <p>"{{comment.comment_body}}" </p>
+              <p class="small ">By {{comment.user.name}} on {{format_date comment.date_created}}</p>
+              <p></p>
+              {{/each}}
+            </div>
+          </div>
+          <div class='text-center'>
+            <a href='{{book.buyLink}}' class='btn btn-primary'>Go to Book</a>
+          </div>
+        </div>
+        {{/each}}
       </div>
-      {{/each}}
     </div>
-    {{/if}}
-  </div>
-</div>
 
-<script src="./js/profile.js"></script>
+    <div class='container'>
+      <div class='row homepage-main text-center'>
+        {{#each book.comments as |comment|}}
+        <div class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'>
+          <div class=''>
+            <p>{{comment.comment_body}}
+              by
+              {{comment.user.name}}
+              on
+              {{format_date comment.date_created}}</p>
+          </div>
+          <div class='text-center'>
+            <a href="{{book.buyLink}}" class='btn btn-primary'>Go to Book</a>
+          </div>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+
+    <script src="./js/profile.js"></script>
