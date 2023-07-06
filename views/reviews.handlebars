@@ -13,7 +13,6 @@
       >
         <div class=''>
           <h3>
-            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
             {{{book.title}}}
             <div class='image'>
               <img src='{{book.thumbnail}}' />
@@ -24,7 +23,8 @@
           <p>Added to Favorite by
             {{book.user.name}}
             {{!-- on
-            {{format_date book.date_created}}</p> --}}
+            {{format_date book.date_created}} --}}
+            </p>
           <div class='bg-dark text-light'>
             {{#each book.comments as |comment|}}
               <p>"{{comment.comment_body}}" </p>
@@ -34,7 +34,7 @@
           </div>
         </div>
         <div class='text-center'>
-          <a href='#' class='btn btn-primary'>Go to Book</a>
+          <a href='{{book.canonicalVolumeLink}}' class='btn btn-primary'>Go to Book</a>
         </div>
       </div>
     {{/each}}
@@ -55,7 +55,7 @@
             {{format_date comment.date_created}}</p>
         </div>
         <div class='text-center'>
-          <a href='#' class='btn btn-primary'>Go to Book</a>
+          <a href="{{book.canonicalVolumeLink}}" class='btn btn-primary'>Go to Book</a>
         </div>
       </div>
     {{/each}}

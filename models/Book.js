@@ -43,6 +43,13 @@ Book.init(
       type: DataTypes.INTEGER,
       // allowNull: false,
     },
+    buyLink: { //buy book link
+      type: DataTypes.STRING,
+      // allowNull: false,
+    },
+    canonicalVolumeLink: {
+      type: DataTypes.STRING,
+    },
     user_id: {
       type: DataTypes.INTEGER,
       references: {
