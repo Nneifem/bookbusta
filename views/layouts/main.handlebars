@@ -4,8 +4,6 @@
     <meta charset='UTF-8' />
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <title>Bookbusta</title>
-    <link rel='stylesheet' href='/css/jass.css' />
-    <link rel='stylesheet' href='/css/style.css' />
     <script
       src='https://kit.fontawesome.com/0ba112b42d.js'
       crossorigin='anonymous'
@@ -20,76 +18,70 @@
       rel='stylesheet'
       href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
     />
+    <link rel='stylesheet' href='/css/jass.css' />
+    <link rel='stylesheet' href='/css/style.css' />
 
-    {{! <link rel="stylesheet" href="/css/templogin.css"> }}
+    {{!
+  <link rel="stylesheet" href="/css/templogin.css"> }}
   </head>
 
-  <body class=" bg-dark text-light">
-    <div class='flex-column justify-space-around'>
+  <body {{! class="bg-dark text-light" }}>
+    <div {{! class='flex-column justify-space-around' }}>
       <header
         class='navBar display-flex text-center justify-space-between align-center p-2'
       >
         {{! <header class="display-flex justify-space-between align-center p-2"> }}
 
-        <h1>
+        <h1 class=''>
           <span role='img' aria-label='book'>📖</span>
-          <a class='text-dark' href='/'>Bookbusta</a>
+          <a class='text-light' href='/'>Bookbusta</a>
           <span role='img' aria-label='book'>📖</span>
         </h1>
         {{! <a href="/">Bookbusta</a>
         <span role="img" aria-label="book">📖</span> }}
         {{! </h1> }}
         {{!-- <nav>
-        <a href="/searchbooks">Search Books</a> |
-        <!-- Conditionally render login or logout links -->
-        {{#if logged_in}}
-        <a href="/profile">profile</a> |
-        <button class="no-button" id="logout">logout</button>
-        {{else}}
-        <a href="/login">login</a>
-        {{/if}}
+          <a href="/searchbooks">Search Books</a> |
+          <!-- Conditionally render login or logout links -->
+          {{#if logged_in}}
+          <a href="/profile">profile</a> |
+          <button class="no-button" id="logout">logout</button>
+          {{else}}
+          <a href="/login">login</a>
+          {{/if}}
         </nav> --}}
 
         <nav class='nav nav-tabs justify-content-center'>
+
+          <li class='nav-item'>
+            <a class='nav-link active' href='/reviews'><i
+                class='fa fa-fw fa-book'
+              ></i>Reviews</a>
+          </li>
+        
+          <li class='nav-item'>
+            <a class='nav-link active' href='/searchbooks'><i
+                class='fa fa-fw fa-book'
+              ></i>Search Books</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link active' href='/questionaire'><i
+                class='fa fa-fw fa-search'
+              ></i>Search By Genre</a>
+          </li>
+          <li class='nav-item'>
+            <a class='nav-link active' href='/profile'><i
+                class='fa fa-fw fa-laptop'
+              ></i>Profile</a>
+          </li>
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
             <li class='nav-item'>
-              <a class='nav-link active' href='/searchbooks'><i
-                  class='fa fa-fw fa-book'
-                ></i>Search Books</a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link active' href='/questionaire'><i
-                  class='fa fa-fw fa-search'
-                ></i>Search By Genre</a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link active' href='/profile'><i
-                  class='fa fa-fw fa-laptop'
-                ></i>Profile</a>
-            </li>
-            <li class='nav-item'>
-              <button class='no-button nav-link active' id='logout'><i
+              <button class=' nav-link active' id='logout'><i
                   class='fa fa-fw fa-user'
                 ></i>Logout</button>
             </li>
           {{else}}
-            <li class='nav-item'>
-              <a class='nav-link active' href='/searchbooks'><i
-                  class='fa fa-fw fa-book'
-                ></i>
-                Search Books</a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link active' href='/questionaire'><i
-                  class='fa fa-fw fa-search'
-                ></i>Search By Genre</a>
-            </li>
-            <li class='nav-item'>
-              <a class='nav-link active' href='/profile'><i
-                  class='fa fa-fw fa-laptop'
-                ></i>Profile</a>
-            </li>
             <li class='nav-item'>
               <a class='nav-link active' href='/login'><i
                   class='fa fa-fw fa-user'

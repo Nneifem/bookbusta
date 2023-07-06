@@ -109,7 +109,9 @@ router.get('/get-quote/:book', async (req, res) => {
 router.get('/questionaire', async (req, res) => {
   try {
     console.log('questionaire');
-    res.render('questionaire');
+    res.render('questionaire', {
+      logged_in: req.session.logged_in
+    });
   } catch (err) {
     console.log(err);
     res.json({
@@ -129,7 +131,8 @@ router.get('/questionaire/:searchTerm', async (req, res) => {
     }));
 
     res.render('questionaire', {
-      genreData
+      genreData,
+      logged_in: req.session.logged_in
     });
   } catch (err) {
     console.log(err);
@@ -142,10 +145,46 @@ router.get('/questionaire/:searchTerm', async (req, res) => {
 // route to book search page
 router.get("/searchbooks", async (req, res)=> {
   try { 
-    res.render("search")
+    // const user = userData.get({ plain: true });
+    res.render("search", {
+      logged_in: req.session.logged_in
+    })
   } catch (error) {
     res.status(500).json(error)
     
+  }
+})
+
+router.get("/reviews", async (req, res)=> {
+  try { // expecting to show all books
+     // Get all books and JOIN with user data
+     const bookData = await Book.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['name'],
+        },
+        {
+          model: Comment,
+          include: [User],
+          // attributes: ["comment_body"],
+        },
+      ],
+    });
+    // const bookData = await Book.findAll({
+    //   include: [Comment],
+    // });
+// console.log(bookData); // comments
+    // Serialize data so the template can read it
+    const books = bookData.map((Book) => Book.get({ plain: true }));
+    // create another var "comment" -> is to have the array of the comment
+console.log(books[0].comments[0].comment_body);
+    res.render("reviews", {
+      books,
+      logged_in: req.session.logged_in
+    })
+  } catch (error) {
+    res.status(500).json(error)
   }
 })
 module.exports = router;

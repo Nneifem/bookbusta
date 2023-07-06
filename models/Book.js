@@ -13,7 +13,7 @@ Book.init(
     },
     title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     author: {
       type: DataTypes.STRING,
@@ -25,7 +25,7 @@ Book.init(
     },
     thumbnail: { //image
       type: DataTypes.STRING,
-      allowNull: false,
+      // allowNull: false,
     },
     description: { //summary
       type: DataTypes.TEXT,

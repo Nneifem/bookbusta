@@ -1,0 +1,63 @@
+{{! display books from database }}
+{{! need a webpage }}
+{{! how to get data? }}
+{{! what data to display }}
+{{! how to get data from backend to frontend }}
+{{! need api call  }}
+
+<div class='container'>
+  <div class='row homepage-main text-center'>
+    {{#each books as |book|}}
+      <div
+        class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'
+      >
+        <div class=''>
+          <h3>
+            <!-- Call helper function with triple brackets to render the emoji span as HTML -->
+            {{{book.title}}}
+            <div class='image'>
+              <img src='{{book.thumbnail}}' />
+            </div>
+            <a href='/book/{{book.id}}'>{{book.name}}</a>
+          </h3>
+          <p>{{book.description}}</p>
+          <p>Added to Favorite by
+            {{book.user.name}}
+            {{!-- on
+            {{format_date book.date_created}}</p> --}}
+          <div class='bg-dark text-light'>
+            {{#each book.comments as |comment|}}
+              <p>"{{comment.comment_body}}" </p>
+              <p class="small ">By {{comment.user.name}} on {{format_date comment.date_created}}</p>
+              <p></p>
+            {{/each}}
+          </div>
+        </div>
+        <div class='text-center'>
+          <a href='#' class='btn btn-primary'>Go to Book</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<div class='container'>
+  <div class='row homepage-main text-center'>
+    {{#each book.comments as |comment|}}
+      <div
+        class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'
+      >
+        <div class=''>
+          <p>{{comment.comment_body}}
+            by
+            {{comment.user.name}}
+            on
+            {{format_date comment.date_created}}</p>
+        </div>
+        <div class='text-center'>
+          <a href='#' class='btn btn-primary'>Go to Book</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
