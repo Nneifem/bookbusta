@@ -10,6 +10,43 @@ html {
   color: #e4e4e4;
 }
 
+/* General page styles */
+
+header {
+  font-family: "Jomolhari", serif;
+}
+
+/* body {
+  background-color: #a28089;
+} */
+
+h1 {
+  font-family: "Jomolhari", serif;
+  /* background-color: teal;
+  color: #ffb3c6; */
+  padding: 16px;
+  margin-bottom: 5px;
+}
+
+
+main {
+  font-family: "Jomolhari", serif;
+  margin-top: -5px;
+  /* background-color: #a28089; */
+}
+
+/* Card styles */
+
+/* .card {
+  background-color: #fcebf0;
+} */
+
+.card:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transform: scale(1.02);
+  transition: all 0.3s ease;
+}
+
 /* .container {
     padding: 1em;
     max-width:750px;
