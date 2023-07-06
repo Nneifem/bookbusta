@@ -3,33 +3,39 @@
     "title": "Spider's Web",
     "author": "Charles Osborne;Agatha Christie",
     "categories": "Detective and mystery stories",
-    "thumbnail": "http://books.google.com/books/content?id=gA5GPgAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "description": "A new 'Christie for Christmas' -- a full-length novel adapted from her acclaimed play by Charles Osborne Following BLACK COFFEE and THE UNEXPECTED GUEST comes the final Agatha Christie play novelisation, bringing her superb storytelling to a new legion of fans. Clarissa, the wife of a Foreign Office diplomat, is given to daydreaming. 'Supposing I were to come down one morning and find a dead body in the library, what should I do?' she muses. Clarissa has her chance to find out when she discovers a body in the drawing-room of her house in Kent. Desperate to dispose of the body before her husband comes home with an important foreign politician, Clarissa persuades her three house guests to become accessories and accomplices. It seems that the...",
-    "published_year":"2000",
-    "average_rating": 3.85,
-    "page_count": 241,
+    "thumbnail": "http://books.google.com/books/content?id=zgWRQSBqgfYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "description": "A classic from the original queen of mystery: Agatha Christie...",
+    "published_year":"2010",
+    "average_rating": 3.5,
+    "page_count": 100,
+    "buyLink": "https://play.google.com/store/books/details?id=zgWRQSBqgfYC&rdid=book-zgWRQSBqgfYC&rdot=1&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=zgWRQSBqgfYC",
     "user_id": 1
   },
   {
     "title": "If Tomorrow Comes",
     "author": "Sidney Sheldon",
     "categories": "Adventure stories",
-    "thumbnail": "http://books.google.com/books/content?id=l2tBi_jLuk8C&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-    "description": "One of Sidney Sheldon's most popular and bestselling titles, repackaged and reissued for a new generation of fans...",
-    "published_year":"1994",
-    "average_rating": 4.04,
-    "page_count": 501,
+    "thumbnail": "http://books.google.com/books/content?id=-H4xjMzoYj4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+    "description": "Lovely, idealistic Tracy Whitney is framed into a fifteen year sentence in an escape-proof penitentiary. With dazzling ingenuity she fights back to destroy the untouchable crime lords who put her there. With her intelligence and beauty as her only weapons...",
+    "published_year":"2010",
+    "average_rating": 4,
+    "page_count": 100,
+    "buyLink": "https://play.google.com/store/books/details?id=-H4xjMzoYj4C&rdid=book--H4xjMzoYj4C&rdot=1&source=gbs_api",
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=-H4xjMzoYj4C",
     "user_id": 1
   },
   {
     "title": "The Chronicles of Narnia: Lion, the witch and the wardrobe",
     "author": "Clive Staples Lewis",
-    "categories": "Fairy tales",
-    "thumbnail": "http://books.google.com/books/content?id=5WNRJAFEjLYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-    "description": "Includes an author biography, chapter summaries, vocabulary builders, reproducibles, and cross-curricular activities for students of all learning styles for Lewis's tale \"The Lion, the Witch, and the Wardrobe...",
-    "published_year":"1978",
-    "average_rating": 4.26,
-    "page_count": 1425,
+    "categories": "Fiction",
+    "thumbnail": "http://books.google.com/books/content?id=froyMQAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+    "description": "Open the door and enter a new world! The Lion, the Witch and the Wardrobe is the second book in C. S. Lewis's classic fantasy series, which has been captivating readers of all ages with a magical land and unforgettable characters for over sixty years...",
+    "published_year":"2017-10-24",
+    "average_rating": 4,
+    "page_count": 208,
+    "buyLink": "",
+    "canonicalVolumeLink": "https://books.google.com/books/about/The_Lion_the_Witch_and_the_Wardrobe_A_Ha.html?hl=&id=froyMQAACAAJ",
     "user_id": 2
   },
   {
@@ -41,6 +47,8 @@
     "published_year":"2011-11-02",
     "average_rating": 4.5,
     "page_count": 352,
+    "buyLink": "https://play.google.com/store/books/details?id=5u25mVscD5MC&rdid=book-5u25mVscD5MC&rdot=1&source=gbs_api", 
+    "canonicalVolumeLink": "https://play.google.com/store/books/details?id=5u25mVscD5MC",
     "user_id": 1
   },
   {
@@ -52,6 +60,8 @@
     "published_year":"2020-08-18",
     "average_rating": 3,
     "page_count": 496,
+    "buyLink": "", 
+    "canonicalVolumeLink": "https://books.google.com/books/about/Silver_Sword_and_Stone.html?hl=&id=D_b1DwAAQBAJ",
     "user_id": 4
   },
   {
@@ -62,7 +72,9 @@
     "description": "When Anastasia Steele, a young literature student, interviews wealthy young entrepreneur Christian Grey for her campus magazine, their initial meeting introduces Anastasia to an exciting new world that will change them both forever...",
     "published_year":"2011",
     "average_rating": 4,
-    "page_count": 514,
+    "page_count": 736,
+    "buyLink": "",
+    "canonicalVolumeLink": "https://books.google.com/books/about/Fifty_Shades_of_Grey.html?hl=&id=ZTiNEAAAQBAJ",
     "user_id": 3
   }
 ]
