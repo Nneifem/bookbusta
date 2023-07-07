@@ -87,3 +87,22 @@ header,
   font-weight: bold;
   margin-left: -5px;
 }
+
+
+#search-form {
+  /* background-color: #056605; */
+  display: flex;
+  justify-content: center;
+  padding: 10px 0px;
+}
+
+input {
+  background-color: white;
+  width: 55%;
+}
+
+.icon-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+}
