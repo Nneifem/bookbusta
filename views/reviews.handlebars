@@ -13,7 +13,9 @@
       >
         <div class=''>
           <h3>
-            {{{book.title}}}
+            <a class='text-light' href='/book/{{book.id}}'>
+              {{{book.title}}}
+            </a>
             <div class='image'>
               <img src='{{book.thumbnail}}' />
             </div>
@@ -24,24 +26,41 @@
             {{book.user.name}}
             {{!-- on
             {{format_date book.date_created}} --}}
-            </p>
+          </p>
           <div class='bg-dark text-light'>
             {{#each book.comments as |comment|}}
               <p>"{{comment.comment_body}}" </p>
-              <p class="small ">By {{comment.user.name}} on {{format_date comment.date_created}}</p>
+              <p class='small'>By
+                {{comment.user.name}}
+                on
+                {{format_date comment.date_created}}</p>
               <p></p>
             {{/each}}
           </div>
         </div>
         <div class='text-center'>
-          <a href='{{book.canonicalVolumeLink}}' class='btn btn-primary'>Go to Book</a>
+          <a href='{{book.canonicalVolumeLink}}' class='btn btn-primary'>Go to
+            Book</a>
+          {{! <div class="row">
+    <div class="text-center mx-auto col-lg-10 col-md-8 col-sm-7">
+        <form id="comment-form">
+            <label for="comment-form"><strong>COMMENT</strong></label>
+            <div class="form-group">
+                <textarea class="form-control" id="comment" rows="2"></textarea>
+                <div class="mt-2">
+                    <button type="submit" class="btn btn-dark">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div> }}
         </div>
       </div>
     {{/each}}
   </div>
 </div>
 
-<div class='container'>
+{{!-- <div class='container'>
   <div class='row homepage-main text-center'>
     {{#each book.comments as |comment|}}
       <div
@@ -60,4 +79,5 @@
       </div>
     {{/each}}
   </div>
-</div>
+</div> --}}
+
