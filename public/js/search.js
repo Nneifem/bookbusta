@@ -22,6 +22,7 @@ function googleapi(event) {
                     <img src="${data.items[index].volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="...">
                         <div class="card-body">
                             <h5 class="card-title">${data.items[index].volumeInfo.title}</h5>
+                            <p class="card-authors">By: ${data.items[index].volumeInfo.authors}</p>
                             <p class="card-text">${data.items[index].volumeInfo.description}</p>
                             <a id="card-link" href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">Go somewhere</a>
                             <a class="btn btn-primary save" type="submit">Add to Favorites</a> 
@@ -38,14 +39,15 @@ const saveBookHandler = async (event) => {
 
     const card = event.target.closest('.card');
     const title = card.querySelector('.card-title').textContent.trim();
+    const author = card.querySelector('.card-authors').textContent.trim();
     const description = card.querySelector('.card-text').textContent.trim();
     const buyLink = card.querySelector('#card-link').getAttribute('href').trim();
     const thumbnail = card.querySelector('.card-img-top').getAttribute('src').trim();
 
-    if (title && description && buyLink && thumbnail) {
+    if (title && author && description && buyLink && thumbnail) {
         const response = await fetch(`/api/book`, {
             method: 'POST',
-            body: JSON.stringify({ title, description, buyLink, thumbnail }),
+            body: JSON.stringify({ title, author, description, buyLink, thumbnail }),
             headers: {
                 'Content-Type': 'application/json',
             },
