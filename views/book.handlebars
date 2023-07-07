@@ -1,39 +1,47 @@
-{{!-- Saved Book Page --}}
-<div class="container">
-    <div class="row">
-        <div class="card text-dark shadow mb-3 blogPost-main">
-            <div class="text-center mx-auto p-3">
-                <h2>{{title}}</h2>
-                <p>Created by {{user.name}} on {{format_date date_created}}</p>
-                <p>{{description}}</p>
-                <button class="btn btn-dark" id="editBtn">Edit</button>
-                <button class="btn btn-dark" id="deleteBtn">Delete</button>
-            </div>
-
-            <div class="text-center">
-                <h3>Comments</h3>
-                {{#each comments as |comment| }}
-                <div>
-                    <p>{{comment.comment_body}} by {{comment.user.name}} on {{format_date comment.date_created}}</p>
-                </div>
-                {{/each}}
-            </div>
+{{! Saved Book Page }}
+<div class='container'>
+  <div class='row'>
+    <div class='card text-dark shadow mb-3 blogPost-main'>
+      <div class='text-center mx-auto p-3'>
+        <h2>{{title}}</h2>
+        <p> by {{author}}</p>
+        <div class='image'>
+          <img src='{{thumbnail}}' />
         </div>
+        <p>{{description}}</p>
+      </div>
+
+      <div id="comments-list" class='text-center'>
+        <h3>Comments</h3>
+        {{#each comments as |comment|}}
+          <div>
+            <p>"{{comment.comment_body}}"
+              
+              <br> by
+              {{comment.user.name}}
+              on
+              {{format_date comment.date_created}}</p>
+            {{!-- <button class='btn btn-dark' id='editBtn'>Edit</button> --}}
+            <button data-id="{{comment.id}}" class='btn btn-dark' id='deleteBtn'>Delete</button>
+          </div>
+        {{/each}}
+      </div>
     </div>
+  </div>
 </div>
 
-<div class="row">
-    <div class="text-center mx-auto col-lg-10 col-md-8 col-sm-7">
-        <form id="comment-form">
-            <label for="comment-form"><strong>COMMENT</strong></label>
-            <div class="form-group">
-                <textarea class="form-control" id="comment" rows="3"></textarea>
-                <div class="mt-2">
-                    <button type="submit" class="btn btn-dark">Submit</button>
-                </div>
-            </div>
-        </form>
-    </div>
+<div class='row'>
+  <div class='text-center mx-auto col-lg-10 col-md-8 col-sm-7'>
+    <form id='comment-form'>
+      <label for='comment-form'><strong>COMMENT</strong></label>
+      <div class='form-group'>
+        <textarea class='form-control' id='comment' rows='3'></textarea>
+        <div class='mt-2'>
+          <button type='submit' class='btn btn-dark'>Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
 </div>
 
-<script src="/js/comments.js"></script>
+<script src='/js/comments.js'></script>
