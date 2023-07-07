@@ -187,4 +187,59 @@ console.log(books[0].comments[0].comment_body);
     res.status(500).json(error)
   }
 })
+
+// New book page: Renders 'create.handlebars' -- redirects to /login if not logged in
+router.get("/create", async (req, res) => {
+  try {
+    if (req.session.logged_in) {
+      res.render("create", {
+        logged_in: req.session.logged_in,
+        userId: req.session.user_id,
+      });
+      return;
+    } else {
+      res.redirect("/login");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
+// Set up a route to be able to edit an existing book comment 
+router.get("/edit/:id", async (req, res) => {
+  try {
+    const bookComments = await Comment.findByPk(req.params.id, {
+      // Join user data and comment data with blog post data
+      include: [
+        {
+          model: User,
+          attributes: ["name"],
+        },
+        {
+          model: Comment,
+          include: [User],
+        },
+      ],
+    });
+
+    const comment = bookComments.get({ plain: true });
+    console.log(comment);
+
+    if (req.session.logged_in) {
+      res.render("edit", {
+        ...comment,
+        logged_in: req.session.logged_in,
+        userId: req.session.user_id,
+      });
+      return;
+    } else {
+      res.redirect("/login");
+    }
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;
