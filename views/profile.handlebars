@@ -5,29 +5,11 @@
 </div>
 
 <div class="row mt-4">
-  <div class="col-md-6">
+  <div>
     <h3>Saved Books:</h3>
 
-    {{!-- Search bar for saved books --}}
-    <div class="row">
-      <form id="pf-search-form">
-        <div class="input-group">
-          <div class="form-outline">
-            <input type="text" id="pf-search" class="form-control" />
-            <label class="form-label" for="search">Search...</label>
-          </div>
-          <button type="button" class="btn btn-primary">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </form>
-      <ul>
-        {{!-- Placeholder for search results --}}
-      </ul>
-    </div>
-
     {{!-- Saved to Favorites Books --}}
-    <div class='container'>
+    <div id='book-list' class='container'>
       <div class='row homepage-main text-center'>
         {{#each books as |book|}}
         <div class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'>
@@ -50,25 +32,7 @@
           </div>
           <div class='text-center'>
             <a href='{{book.buyLink}}' class='btn btn-primary'>Go to Book</a>
-          </div>
-        </div>
-        {{/each}}
-      </div>
-    </div>
-
-    <div class='container'>
-      <div class='row homepage-main text-center'>
-        {{#each book.comments as |comment|}}
-        <div class='row mb-4 project card bg-secondary text-light shadow col-md-10 mx-auto text-left mt-5'>
-          <div class=''>
-            <p>{{comment.comment_body}}
-              by
-              {{comment.user.name}}
-              on
-              {{format_date comment.date_created}}</p>
-          </div>
-          <div class='text-center'>
-            <a href="{{book.buyLink}}" class='btn btn-primary'>Go to Book</a>
+            <button data-id="{{book.id}}" class="btn btn-primary">Remove from Favorites</button>
           </div>
         </div>
         {{/each}}

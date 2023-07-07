@@ -52,14 +52,12 @@ const saveBookHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/profile');
-            console.log('Added to favorites');
+            alert('Added to favorites');
         } else {
             alert('Failed to add to favorites');
         }
     }
 };
-
 
 document.querySelector("#search-form").addEventListener("submit", googleapi);
 document.addEventListener('click', function (event) {
