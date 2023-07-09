@@ -1421,6 +1421,9 @@ form [type='radio'] {
   .align-content-center-sm {
     align-content: center;
   }
+  .container text-center mt-3 padding {
+    width: 100%
+  };
 }
 
 /* col-md */
@@ -1516,6 +1519,9 @@ form [type='radio'] {
   .align-content-center-md {
     align-content: center;
   }
+  .container text-center mt-3 padding {
+    width: 100%
+  };
 }
 
 /* col-lg */
