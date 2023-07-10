@@ -1,37 +1,34 @@
 <div class="question-section">
   
   <!-- where user will type their response-->
-      <form id="genre-form">
-        <div class="question-form">
-          <label for="genre-questionaire">Search Genre</label>
-          <input class="genre-input" type="text" id="genre-questionaire">
+      <form id="search-form">
+        <div class="input-group">
+          <label for="genre-questionaire" class="search-label">Search Genre</label>
+          <input class="form-control" type="text" id="genre-questionaire">
         </div>
 
     <!-- submit button -->
         <div class="submit-form">
           <button type="submit" class="btn btn-primary">
-            <i class="fas fa-search"></i>
+            <i class="fa-solid fa-book"></i>
         </div>
       </form>
     </div>
 
 
-{{!-- <form id="search-form">
-    <div class="input-group">
-        {{!-- <div class="form-outline"> --}}
-            <label class="form-label" for="search">Search</label>
-            <input type="text" id="search" class="form-control" />
-              <button type="submit" class="btn btn-primary">
-                <i class="fa-solid fa-book"></i>
-            {{!-- <i class="fas fa-search"></i> --}}
-        </button>
-    </div> --}}
 
-    <div class="results">
+
+    <div class="card" style="width: 18rem;">
         {{#each genreData}}
-        <a href="{{bookLink}}"><img src="{{bookImage}}"></a>
-        <h2>Title: {{bookTitle}}</h2>
+        <div class="card-body">
+        <img src="{{bookImage}}" class="card-img-top" alt="...">
+        <h5 class="card-title">{{bookTitle}}</h5>
+        <p class="card-text">By: {{bookAuthor}}</p>
+        <p class="card-text">{{bookDescription}}</p>
+        <a id="card-link" href="{{bookLink}}" target="_blank" class="btn btn-primary">Go somewhere</a> 
+        <a class="btn btn-primary save" type="submit">Add to Favorites</a>
         {{/each}}
+        </div>
     </div>
 
 
