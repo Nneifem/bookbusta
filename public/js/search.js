@@ -1,6 +1,6 @@
 let bookList = document.querySelector(".book-list");
 
-
+// Searches through Google Books API
 function googleapi(event) {
     event.preventDefault()
     const search = document.querySelector("#search").value.trim()
@@ -11,14 +11,11 @@ function googleapi(event) {
             console.log(response)
             return response.json()
 
+            // Returns books
         }).then((data) => {
             bookList.innerHTML = "";
             for (let index = 0; index < data.items.length; index++) {
-                console.log("HI");
-                // bookList.innerHTML += `<li> ${data.items[index].volumeInfo.title} </li>`;
-
-
-                bookList.innerHTML+= `<div class="card" style="width: 20rem; margin-right: 15px; min-width: 30%; background-color: #1a1a1a;">
+                bookList.innerHTML += `<div class="card" style="width: 20rem; margin-right: 15px; min-width: 30%; background-color: #1a1a1a;">
                     <div class="search-card-body bg-dark text-center" style="padding: 1em;"> 
                         <h5 class="card-title text-light">${data.items[index].volumeInfo.title}</h5>
                         <p class="card-authors text-light">By: ${data.items[index].volumeInfo.authors}</p>

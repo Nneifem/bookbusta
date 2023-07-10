@@ -13,39 +13,31 @@ Book.init(
     },
     title: {
       type: DataTypes.STRING,
-      // allowNull: false,
     },
     author: {
       type: DataTypes.STRING,
-      // allowNull: false,
     },
     categories: { //genre
       type: DataTypes.STRING,
-      // allowNull: false,
     },
     thumbnail: { //image
       type: DataTypes.STRING,
-      // allowNull: false,
     },
     description: { //summary
       type: DataTypes.TEXT,
     },
     published_year: {
       type: DataTypes.DATE,
-      // allowNull: false,
       defaultValue: DataTypes.NOW,
     },
     average_rating: { 
       type: DataTypes.DECIMAL,
-      // allowNull: false,
     },
     page_count: {
       type: DataTypes.INTEGER,
-      // allowNull: false,
     },
     buyLink: { //buy book link
       type: DataTypes.STRING,
-      // allowNull: false,
     },
     canonicalVolumeLink: {
       type: DataTypes.STRING,
