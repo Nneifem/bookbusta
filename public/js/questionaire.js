@@ -20,7 +20,7 @@ function genre(event) {
                         <img src="${data.items[index].volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="...">
                         <p class="card-text text-light">${data.items[index].volumeInfo.description}</p>
                         <div class="btn-box" style="text-align: center;">
-                            <a id="card-link"  href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">View Book</a>
+                            <a id="card-link" href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">View Book</a>
                             <a class="btn btn-primary save" type="submit">Add to Favorites</a> 
                         </div>
                     </div>
