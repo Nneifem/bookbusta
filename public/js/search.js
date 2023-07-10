@@ -1,4 +1,5 @@
 let bookList = document.querySelector(".book-list");
+const withAuth = require('../../utils/auth');
 
 // Searches through Google Books API
 function googleapi(event) {
