@@ -18,7 +18,7 @@ function googleapi(event) {
                 // bookList.innerHTML += `<li> ${data.items[index].volumeInfo.title} </li>`;
 
 
-                bookList.innerHTML+= `<div class="card" style="width: 20rem; margin-right: 15px; min-width: 30%;">
+                bookList.innerHTML+= `<div class="card" style="width: 20rem; margin-right: 15px; min-width: 30%; background-color: #1a1a1a;">
                     <div class="search-card-body bg-dark text-center" style="padding: 1em;"> 
                         <h5 class="card-title text-light">${data.items[index].volumeInfo.title}</h5>
                         <p class="card-authors text-light">By: ${data.items[index].volumeInfo.authors}</p>
