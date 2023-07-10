@@ -2,7 +2,6 @@ const router = require('express').Router();
 const { Book, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 const { getQuote } = require('../utils/quote-api');
-const { getGenre } = require('../utils/genre-api');
 
 router.get('/', async (req, res) => {
   try {
@@ -110,30 +109,6 @@ router.get('/questionaire', async (req, res) => {
   try {
     console.log('questionaire');
     res.render('questionaire', {
-      logged_in: req.session.logged_in
-    });
-  } catch (err) {
-    console.log(err);
-    res.json({
-      message: "you know there's an error right?"
-    });
-  }
-});
-
-router.get('/questionaire/:searchTerm', async (req, res) => {
-  try {
-    const response = await getGenre(req.params.searchTerm);
-    let genreData = response.data.items;
-    genreData = genreData.map(genreInfo => ({
-      bookImage: genreInfo.volumeInfo.imageLinks.smallThumbnail,
-      bookLink: genreInfo.volumeInfo.previewLink,
-      bookTitle: genreInfo.volumeInfo.title,
-      bookAuthor: genreInfo.volumeInfo.authors,
-      bookDescription: genreInfo.volumeInfo.description
-    }));
-
-    res.render('questionaire', {
-      genreData,
       logged_in: req.session.logged_in
     });
   } catch (err) {

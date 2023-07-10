@@ -1,36 +1,14 @@
-<div class="question-section">
-  
-  <!-- where user will type their response-->
-      <form id="search-form">
-        <div class="input-group">
-          <label for="genre-questionaire" class="search-label">Search Genre</label>
-          <input class="form-control" type="text" id="genre-questionaire">
-        </div>
+<form id="search-form">
+  <div class="input-group">
+    <label for="genre-questionaire" class="search-label">Search Genre</label>
+    <input class="form-control" type="text" id="genre-questionaire">
+      <button type="submit" class="btn btn-primary">
+        <i class="fa-solid fa-book"></i>
+  </div>
+</form>
 
-    <!-- submit button -->
-        <div class="submit-form">
-          <button type="submit" class="btn btn-primary">
-            <i class="fa-solid fa-book"></i>
-        </div>
-      </form>
-    </div>
+<ul class="genre-results">
 
-
-
-
-    <div class="card" style="width: 18rem;">
-        {{#each genreData}}
-        <div class="card-body">
-        <img src="{{bookImage}}" class="card-img-top" alt="...">
-        <h5 class="card-title">{{bookTitle}}</h5>
-        <p class="card-text">By: {{bookAuthor}}</p>
-        <p class="card-text">{{bookDescription}}</p>
-        <a id="card-link" href="{{bookLink}}" target="_blank" class="btn btn-primary">Go somewhere</a> 
-        <a class="btn btn-primary save" type="submit">Add to Favorites</a>
-        {{/each}}
-        </div>
-    </div>
-
-
+</ul>
     
 <script src="/js/questionaire.js"></script>
