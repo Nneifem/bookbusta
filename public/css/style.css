@@ -113,6 +113,7 @@ input {
   font-size: 24px;
 }
 
+/* Profile Styling */
 .profileCS {
   display: flex;
   flex-direction: column;
@@ -124,15 +125,19 @@ input {
   padding: 2%;
 }
 
+/* Search Page Styling */
 .book-list {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
 .search-label {
   margin-right: 10px;
 }
 
+/* Genre Styling */
 .genre-results {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-evenly;
 }
