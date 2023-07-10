@@ -18,11 +18,17 @@
 
 
 
-    <div class="results">
+    <div class="card" style="width: 18rem;">
         {{#each genreData}}
-        <a href="{{bookLink}}"><img src="{{bookImage}}"></a>
-        <h2>Title: {{bookTitle}}</h2>
+        <div class="card-body">
+        <img src="{{bookImage}}" class="card-img-top" alt="...">
+        <h5 class="card-title">{{bookTitle}}</h5>
+        <p class="card-text">By: {{bookAuthor}}</p>
+        <p class="card-text">{{bookDescription}}</p>
+        <a id="card-link" href="{{bookLink}}" target="_blank" class="btn btn-primary">Go somewhere</a> 
+        <a class="btn btn-primary save" type="submit">Add to Favorites</a>
         {{/each}}
+        </div>
     </div>
 
 

@@ -67,6 +67,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Links
+
 Link to repository: https://github.com/Nneifem/bookbusta
+
 Link to website: https://bookbusta-950538aa625f.herokuapp.com/
+
 Google Book API: https://developers.google.com/books
