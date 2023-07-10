@@ -2,7 +2,7 @@ console.log("==============");
 console.log("here");
 console.log("==============");
 
-const genreForm = document.querySelector('#genre-form');
+const genreForm = document.querySelector('#search-form');
 const searchGenre = document.querySelector('#genre-questionaire');
 const homeButton = document.querySelector('#home-button');
 
