@@ -2,25 +2,30 @@
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
-
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
-
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
+Are you a book lover in search for finding more books and being able to leave or read reviews on other books others have left behind? Then Bookbusta is exactly what you are looking for! This website was built for users to be able to create an account where they cna look up books by title name or genres, be able to add it to their favorite lists or be able to preview the book to see if it is something they will be interested in. Once the book has been added in their favorites, the user can click on the book title leave a comment about their thoughts and feelings on it.
+Bookbusta is a convenient way to search for books, create a book history for yourself, leave reviews for yourself, and read others. Building this website, got to utilize Front-End and Back-End skills together to achieve Bookbusta to how it is.
 
 ## Installation
 
-What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running.
+To get the code working, you need to install Node js.v16 and in the integrated terminal, type the following:
+
+- npm i init -y
+- npm i
+- npm i dotenv express mysql2 sequelize
+- npm i bcrypt
+- npm i express-handlebars
+- npm i express-session
+- npm i connect-session-sequelize
+
+You will also need to get the google book api in order to get the books when searched. Also need to run the sql and seeds files, so open the integrated terminal and type in:
+- mysql -u root -p
+- enter password
+- source db/schema.sql
+- exit
+- npm run seeds
+
+After that the code ready to be run.
+
 
 ## Usage
 
