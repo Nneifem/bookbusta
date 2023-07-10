@@ -18,15 +18,17 @@ function googleapi(event) {
                 // bookList.innerHTML += `<li> ${data.items[index].volumeInfo.title} </li>`;
 
 
-                bookList.innerHTML+= `<div class="card" style="width: 18rem;">
-                    <img src="${data.items[index].volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">${data.items[index].volumeInfo.title}</h5>
-                            <p class="card-authors">By: ${data.items[index].volumeInfo.authors}</p>
-                            <p class="card-text">${data.items[index].volumeInfo.description}</p>
-                            <a id="card-link" href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">Go somewhere</a>
+                bookList.innerHTML+= `<div class="card" style="width: 20rem; margin-right: 15px; min-width: 30%;">
+                    <div class="search-card-body bg-dark text-center" style="padding: 1em;"> 
+                        <h5 class="card-title text-light">${data.items[index].volumeInfo.title}</h5>
+                        <p class="card-authors text-light">By: ${data.items[index].volumeInfo.authors}</p>
+                        <img src="${data.items[index].volumeInfo.imageLinks.thumbnail}" class="card-img-top" alt="...">
+                        <p class="card-text text-light">${data.items[index].volumeInfo.description}</p>
+                        <div class="btn-box" style="text-align: center;">
+                            <a id="card-link"  href="${data.items[index].volumeInfo.previewLink}" target="_blank" class="btn btn-primary">View Book</a>
                             <a class="btn btn-primary save" type="submit">Add to Favorites</a> 
                         </div>
+                    </div>
                 </div>`
             }
             console.log(data);
