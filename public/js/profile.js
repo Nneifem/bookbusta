@@ -1,15 +1,3 @@
-// Search bar
-// const searchForm = document.querySelector("#pf-search-form");
-// const searchInput = document.querySelector("#pf-search");
-
-// searchForm.addEventListener('submit', (event) => {
-//   event.preventDefault();
-
-//   const searchTerm = searchInput.value.replace(" ", "+");
-
-//   window.location.href = `/profile/${searchTerm}`;
-// });
-
 // Removes books from favorites
 const delButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {

@@ -107,3 +107,13 @@ input {
   font-size: 24px;
 }
 
+.profileCS {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-profile {
+  margin: 1%;
+  padding: 2%;
+}
