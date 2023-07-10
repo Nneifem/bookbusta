@@ -132,3 +132,7 @@ input {
   margin-right: 10px;
 }
 
+.genre-results {
+  display: flex;
+  flex-wrap: wrap;
+}
