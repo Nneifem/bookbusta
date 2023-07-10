@@ -117,3 +117,8 @@ input {
   margin: 1%;
   padding: 2%;
 }
+
+.book-list {
+  display: flex;
+  flex-wrap: wrap;
+}
