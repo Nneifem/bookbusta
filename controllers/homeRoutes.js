@@ -127,7 +127,9 @@ router.get('/questionaire/:searchTerm', async (req, res) => {
     genreData = genreData.map(genreInfo => ({
       bookImage: genreInfo.volumeInfo.imageLinks.smallThumbnail,
       bookLink: genreInfo.volumeInfo.previewLink,
-      bookTitle: genreInfo.volumeInfo.title
+      bookTitle: genreInfo.volumeInfo.title,
+      bookAuthor: genreInfo.volumeInfo.authors,
+      bookDescription: genreInfo.volumeInfo.description
     }));
 
     res.render('questionaire', {
