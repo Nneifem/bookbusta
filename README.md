@@ -29,11 +29,7 @@ After that the code ready to be run.
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-To add a screenshot, create an `assets/images` folder in your repository and upload your screenshot to it. Then, using the relative file path, add it to your README using the following syntax:
-
-![alt text](assets/images/screenshot.png)
+https://github.com/Nneifem/bookbusta/assets/126806504/0d9d0976-989e-4cb5-9e73-bde14aa120a6
 
 ## Development Team
 
