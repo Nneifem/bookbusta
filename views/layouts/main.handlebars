@@ -20,8 +20,17 @@
     />
     <link rel='stylesheet' href='/css/jass.css' />
     <link rel='stylesheet' href='/css/style.css' />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    <link
+      rel='stylesheet'
+      href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
+    />
+    <link
+      href='https://fonts.googleapis.com/css?family=Amatic SC'
+      rel='stylesheet'
+    />
+    <style>
+      body { font-family: 'Amatic SC';font-size: 22px; }
+    </style>
 
   </head>
 
@@ -58,7 +67,7 @@
                 class='fa fa-fw fa-book'
               ></i>Reviews</a>
           </li>
-        
+
           <li class='nav-item'>
             <a class='nav-link active' href='/searchbooks'><i
                 class='fa fa-fw fa-book'
@@ -77,7 +86,7 @@
           <!-- Conditionally render login or logout links -->
           {{#if logged_in}}
             <li class='nav-item'>
-              <button class=' nav-link active' id='logout'><i
+              <button class='nav-link active' id='logout'><i
                   class='fa fa-fw fa-user'
                 ></i>Logout</button>
             </li>
