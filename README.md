@@ -29,7 +29,7 @@ After that the code ready to be run.
 
 ## Usage
 
-![](project2.gif)
+Demo Video: https://drive.google.com/file/d/14vTQhHEIt4INXYjg6RqKCDGnc2RH_ahJ/view?usp=sharing
 
 As shown in the demo video, you are able to create an account, search a book by name or genre, preview it, add to favorites or remove it, and leav comments for other users to see.
 
