@@ -33,6 +33,15 @@ Demo Video: https://drive.google.com/file/d/14vTQhHEIt4INXYjg6RqKCDGnc2RH_ahJ/vi
 
 As shown in the demo video, you are able to create an account, search a book by name or genre, preview it, add to favorites or remove it, and leav comments for other users to see.
 
+![alt text](public/images/Screenshot%202023-07-25%20at%202.02.38%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.07.28%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.08.16%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.09.22%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.10.06%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.10.47%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.11.55%20PM.png)
+![alt text](public/images/Screenshot%202023-07-25%20at%202.12.44%20PM.png)
+
 ## Development Team
 
 Stevie Fisher
