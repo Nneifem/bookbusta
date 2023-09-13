@@ -28,6 +28,7 @@ After that the code ready to be run.
 
 
 ## Usage
+<img width="1426" alt="Screenshot 2023-09-13 at 11 40 14 AM" src="https://github.com/Nneifem/bookbusta/assets/126211376/35cad893-a521-4585-9aca-87297ff33f4a">
 
 Demo Video: https://drive.google.com/file/d/14vTQhHEIt4INXYjg6RqKCDGnc2RH_ahJ/view?usp=sharing
 
